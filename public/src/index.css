@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  background-color: #31024d;
+}
+
+.Input_Field{
+    @apply p-2 rounded-lg w-[300px] border-[#997af0] border-2 focus:outline-purple-400 
+}
+
+.selected{
+    outline: 2px solid green;
+    outline-offset: 5px;
+}
+
+.emoji-picker-react{
+  position: absolute;
+  
+}
+
+.EmojiPickerReact {
+  position: absolute;
+}
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+  margin-left: 10px;
+}
+
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: violet;
+}
