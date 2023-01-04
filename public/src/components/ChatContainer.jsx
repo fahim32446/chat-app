@@ -56,6 +56,15 @@ const ChatContainer = ({ currentChat, socket }) => {
       });
     }
   }, []);
+
+  useEffect(() => {
+    arrivalMessage && setMessages((prev) => [...prev, arrivalMessage]);
+  }, [arrivalMessage]);
+
+  useEffect(() => {
+    scrollRef.current?.scrollIntoView({ behavior: "smooth" });
+  }, [messages]);
+
   return (
     currentChat && (
       <div className="h-full">
@@ -71,16 +80,16 @@ const ChatContainer = ({ currentChat, socket }) => {
 
           <Logout />
         </div>
-        <div className="min-h-[80%] p-2 text-teal-50">
+        <div className="max-h-[400px] p-2 text-teal-50 flex flex-col gap-1 overflow-auto">
           {messages.map((message) => {
             return (
               <div ref={scrollRef} key={uuidv4()}>
                 <div
                   className={`message ${
-                    message.fromSelf ? "sended" : "received"
+                    message.fromSelf ? "flex justify-end" : "flex justify-start"
                   }`}
                 >
-                  <div className="content ">
+                  <div className="bg-violet-700 p-1 my-1 rounded-md px-2">
                     <p>{message.message}</p>
                   </div>
                 </div>

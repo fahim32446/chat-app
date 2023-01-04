@@ -16,6 +16,17 @@ body{
     outline-offset: 5px;
 }
 
+.sender{
+
+}
+
+.receiver{
+
+
+}
+
+
+
 .emoji-picker-react{
   position: absolute;
   

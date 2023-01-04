@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URL, {
     useUnifiedTopology: true
 }).then(() => {
     console.log("Connected");
-}).catch(err => console.log("err"))
+}).catch(err => console.log(err))
 
 
 
@@ -35,7 +35,7 @@ app.get('/', (req, res) => {
 
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173",
+        origin: ["http://localhost:5173", "https://chat-app-az.netlify.app"],
         credentials: true,
     },
 });

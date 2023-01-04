@@ -52,7 +52,7 @@ const Chat = () => {
 
   return (
     <div className="bg-[#31024d] flex justify-center items-center w-full h-screen">
-      <div className="text-white grid grid-cols-3 bg-purple-900 p-10 rounded-lg gap-10">
+      <div className="text-white grid grid-cols-3 bg-purple-900 p-10 rounded-lg gap-10 max-h-screen">
         <div className="">
           <Contacts
             contacts={contacts}
